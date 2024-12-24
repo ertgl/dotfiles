@@ -1,0 +1,3 @@
+[submodule "third_party/github.com/bouk/dark-mode-notify"]
+	path = third_party/github.com/bouk/dark-mode-notify
+	url = https://github.com/bouk/dark-mode-notify

@@ -1,0 +1,23 @@
+[commit]
+    gpgsign = true
+
+[core]
+    pager = delta
+
+[init]
+    defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictStyle = zdiff3
+
+[push]
+    autoSetupRemote = true
+
+[include]
+    path = ~/.config/git/delta.gitconfig
+    path = ~/.config/git/gpg.gitconfig
+    path = ~/.config/git/lfs.gitconfig
+    path = ~/.config/git/user.gitconfig
