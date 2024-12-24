@@ -1,0 +1,20 @@
+{
+  "name": "vscode-like-snippets",
+  "private": true,
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "all"
+        ],
+        "path": "./specs/all.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./specs/html.json"
+      }
+    ]
+  }
+}
