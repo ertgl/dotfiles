@@ -1,0 +1,8 @@
+[flavor]
+dark = "gruvbox-dark"
+light = "gruvbox-light"
+
+[status]
+overall = {}
+separator_open = ""
+separator_close = ""

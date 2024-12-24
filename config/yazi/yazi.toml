@@ -1,0 +1,30 @@
+[input]
+cursor_blink = false
+
+[manager]
+linemode = "custom"
+mouse_events = ["click", "drag", "scroll"]
+ratio = [2, 5, 4]
+scrolloff = 5
+show_hidden = true
+show_symlink = true
+sort_by = "natural"
+sort_dir_first = true
+sort_sensitive = true
+sort_translit = false
+title_format = "{cwd}"
+
+[preview]
+image_delay = 100
+image_filter = "catmull-rom"
+image_quality = 90
+sixel_fraction = 10
+tab_size = 4
+ueberzug_scale = 1.0
+wrap = "no"
+
+[which]
+sort_by = "none"
+sort_reverse = false
+sort_sensitive = true
+sort_translit = false
