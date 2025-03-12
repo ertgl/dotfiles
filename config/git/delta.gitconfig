@@ -1,0 +1,12 @@
+[delta]
+    config = ~/.config/git/delta.gitconfig
+    detect-dark-light = auto
+    hyperlinks = true
+    hyperlinks-file-link-format = "{path}:{line}"
+    line-numbers = true
+    navigate = true
+    side-by-side = false
+    tabs = 4
+    true-color = always
+    zero-style = dim syntax
+
