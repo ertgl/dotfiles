@@ -1,0 +1,25 @@
+golang 1.25.4
+
+java openjdk-25.0.1
+gradle 9.2.1
+maven 3.9.11
+
+erlang 28.1.1
+elixir ref:v1.19.3
+
+lua 5.4.7
+
+nodejs 24.11.1
+
+php 8.5.0
+
+protoc 33.1
+
+python 3.14.0t
+
+ruby 3.4.7
+
+rust 1.91.1
+
+zig 0.15.2
+
