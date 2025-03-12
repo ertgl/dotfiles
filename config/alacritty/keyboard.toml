@@ -1,0 +1,13 @@
+[keyboard]
+bindings = [
+  { key = "Left", mods = "Command", chars = "\u001b\u005b\u0031\u003b\u0039\u0048" },
+  { key = "Right", mods = "Command", chars = "\u001b\u005b\u0031\u003b\u0039\u0046" },
+  { key = "Back", mods = "Command", chars = "\u0015" },
+  { key = "Delete", mods = "Alt", chars = "\u0002\u0066\u0037\u0032\u0038" },
+
+  { key = "D", mods = "Command|Shift", chars = "\u0001\u0013" },
+  { key = "D", mods = "Command", chars = "\u0001\u0004" },
+
+  { key = "T", mods = "Command", chars = "\u0001\u0014" },
+  { key = "W", mods = "Command", chars = "\u0001\u0018" },
+]
