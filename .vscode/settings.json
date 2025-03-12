@@ -1,0 +1,12 @@
+{
+  "Lua.diagnostics.globals": [
+    "THEME",
+    "vim",
+    "ya"
+  ],
+  "[shellscript]": {
+    "editor.defaultColorDecorators": "never",
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode",
+    "files.eol": "\n"
+  }
+}
