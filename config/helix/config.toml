@@ -1,0 +1,32 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+clipboard-provider = "termcode"
+
+[editor.statusline]
+left = [
+  "mode",
+  "version-control",
+  "read-only-indicator",
+  "file-name",
+  "diagnostics",
+]
+center = []
+right = [
+  "spinner",
+  "workspace-diagnostics",
+  "register",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+  "selections",
+  "position",
+  "total-line-numbers",
+]
+separator = " "
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.normal]
+c = { a = "code_action" }

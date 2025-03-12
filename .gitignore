@@ -1,0 +1,11 @@
+# Homebrew Bundle artifacts
+/Brewfile.json
+
+# Misc
+.DS_Store
+
+# Mypy artifacts
+/.dmypy.json
+
+# Rope artifacts
+/.ropeproject/

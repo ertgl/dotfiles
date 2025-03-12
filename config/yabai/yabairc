@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+
+set -ex
+
+SKETCHYBAR_HEIGHT="$(sketchybar --query bar | jq -r '.height' || echo 0)"
+EXTERNAL_BAR_HEIGHT="$((SKETCHYBAR_HEIGHT - 6))"
+if [ "$EXTERNAL_BAR_HEIGHT" -lt 0 ];
+then
+  EXTERNAL_BAR_HEIGHT=0
+fi
+
+yabai -m config \
+  external_bar "all:$EXTERNAL_BAR_HEIGHT:0" \
+  top_padding 8 \
+  right_padding 8 \
+  bottom_padding 8 \
+  left_padding 8 \
+  window_gap 5 \
+  layout stack \
+  display_arrangement_order default \
+  window_origin_display default \
+  window_placement second_child \
+  window_insertion_point focused \
+  insert_feedback_color 0xffd75f5f \
+  split_ratio 0.50 \
+  split_type auto \
+  auto_balance off \
+  window_shadow float \
+  window_animation_duration 0.12 \
+  window_animation_easing ease_out_circ \
+  window_opacity on \
+  active_window_opacity 0.90 \
+  normal_window_opacity 0.80 \
+  window_opacity_duration 0.12 \
+  window_zoom_persist on \
+  mouse_modifier ctrl \
+  mouse_action1 move \
+  mouse_action2 resize \
+  mouse_drop_action swap \
+  mouse_follows_focus off \
+  focus_follows_mouse off
+
+yabai -m signal --add event=window_created action="sketchybar -m --trigger window_changed &> /dev/null"
+yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger window_changed &> /dev/null"
+yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger window_changed &> /dev/null"

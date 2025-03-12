@@ -1,0 +1,54 @@
+# Based on Gruvbox Light theme.
+
+[env]
+PREFERS_COLOR_SCHEME = "light"
+
+[window]
+decorations_theme_variant = 'Light'
+opacity = 0.97
+
+[colors]
+draw_bold_text_with_bright_colors = false
+transparent_background_colors = true
+
+[colors.primary]
+background = '#f9f5d7'
+foreground = '#3c3836'
+dim_foreground = '#7c6f64'
+bright_foreground = '#3c3836'
+
+[colors.normal]
+black = '#ebdbb2'
+blue = '#458588'
+cyan = '#689d6a'
+green = '#98971a'
+magenta = '#b16286'
+red = '#cc241d'
+white = '#7c6f64'
+yellow = '#d79921'
+
+[colors.bright]
+black = '#928374'
+blue = '#076678'
+cyan = '#427b58'
+green = '#79740e'
+magenta = '#8f3f71'
+red = '#9d0006'
+white = '#3c3836'
+yellow = '#b57614'
+
+[colors.search.matches]
+background = '#F1DEBE'
+foreground = '#3A2D23'
+
+[colors.search.focused_match]
+background = '#EDD2B2'
+foreground = '#3c3836'
+
+[colors.hints.start]
+background = '#ebdbb2'
+foreground = '#3c3836'
+
+[colors.hints.end]
+background = '#ebdbb2'
+foreground = '#3c3836'

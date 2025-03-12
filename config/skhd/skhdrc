@@ -1,0 +1,35 @@
+# This profile is designed for Drop-CSTM80.
+#
+# The physical key `f13` is mapped to `LAG` (left alt + left gui).
+# The physical key `right gui` is mapped to `Hyper` (left control + shift + alt + gui).
+# The physical key `right alt` is mapped to `Meh` (left control + shift + alt).
+# The physical key `right ctrl` is mapped to `LCAG` (left control + alt + gui).
+
+# LAG
+
+alt + cmd - b : open -a Zen
+alt + cmd - c : open -a "Visual Studio Code"
+alt + cmd - f : open -a Finder
+alt + cmd - m : open -a Spotify
+alt + cmd - t : open -a Alacritty
+alt + cmd - w : open -a WhatsApp
+
+# NOTE: At this layer, skhd reads print_screen as f13.
+alt + cmd -  f13 : open -a "Activity Monitor"
+
+# LCAG
+
+ctrl + alt + cmd - s : sketchybar_toggle
+
+# LCA
+
+ctrl + alt - d : yabai -m window --toggle zoom-parent
+ctrl + alt - f : yabai -m space --layout stack
+ctrl + alt - m : yabai -m space --layout float
+ctrl + alt - s : yabai -m space --layout bsp
+ctrl + alt - z : yabai -m window --toggle zoom-fullscreen
+
+ctrl + alt - up : yabai -m window --focus stack.prev || yabai -m window --focus north
+ctrl + alt - right : yabai -m window --focus east
+ctrl + alt - down : yabai -m window --focus stack.next || yabai -m window --focus south
+ctrl + alt - left : yabai -m window --focus west

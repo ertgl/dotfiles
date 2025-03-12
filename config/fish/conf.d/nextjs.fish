@@ -1,0 +1,3 @@
+if test -z "$NEXT_TELEMETRY_DISABLED"
+    set -Ux NEXT_TELEMETRY_DISABLED 1
+end

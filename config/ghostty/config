@@ -1,0 +1,34 @@
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+#
+# Ghostty can reload the configuration while running by using the menu
+# options or the bound key (default: Command + Shift + comma on macOS and
+# Control + Shift + comma on other platforms). Not all config options can be
+# reloaded while running; some only apply to new windows and others may require
+# a full restart to take effect.
+
+auto-update = off
+
+background-opacity = 0.98
+
+env = COLORTERM=truecolor
+env = SHELL=/usr/local/bin/fish
+
+font-size = 12
+
+initial-command = /usr/local/bin/tmux
+
+# https://github.com/ghostty-org/ghostty/discussions/5891
+# keybind = cmd+t=key:ctrl+a>c
+
+macos-custom-icon = /System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.icns
+macos-icon = custom
+
+shell-integration = fish
+
+theme = dark:Gruvbox Dark Hard,light:Gruvbox Light Hard
+
+window-decoration = none

@@ -1,0 +1,47 @@
+[[mgr.prepend_keymap]]
+on = "<Up>"
+run = "plugin arrow -1"
+
+[[mgr.prepend_keymap]]
+on = "<Down>"
+run = "plugin arrow 1"
+
+[[mgr.prepend_keymap]]
+on = ["!", "b", "d"]
+run = "plugin boundary disable-auto-fix"
+desc = "Disable auto boundary mode"
+
+[[mgr.prepend_keymap]]
+on = ["!", "b", "e"]
+run = "plugin boundary enable-auto-fix"
+desc = "Enable auto boundary mode"
+
+[[mgr.prepend_keymap]]
+on = ["!", "b", "r"]
+run = "plugin boundary set-root"
+desc = "Set current directory as root for boundary mode"
+
+[[mgr.prepend_keymap]]
+on = ["!", "b", "t"]
+run = "plugin boundary toggle-auto-fix"
+desc = "Toggle auto boundary mode"
+
+[[mgr.prepend_keymap]]
+on = ["!", "p", "1", "h"]
+run = "plugin pane hide-parent"
+desc = "Hide parent pane"
+
+[[mgr.prepend_keymap]]
+on = ["!", "p", "1", "s"]
+run = "plugin pane show-parent"
+desc = "Show parent pane"
+
+[[mgr.prepend_keymap]]
+on = ["!", "p", "1", "t"]
+run = "plugin pane toggle-parent"
+desc = "Toggle parent pane"
+
+[[mgr.prepend_keymap]]
+on = ["g", "r"]
+run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
+desc = "Go to root directory"

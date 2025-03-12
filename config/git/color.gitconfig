@@ -1,0 +1,18 @@
+[color]
+    ui = true
+
+[color "diff"]
+    commit = "yellow bold"
+    frag = "magenta bold"
+    func = "146 bold"
+    meta = "11"
+    new = "green bold"
+    old = "red bold"
+    whitespace = "red reverse"
+
+[color "diff-highlight"]
+    newHighlight = "green bold 22"
+    newNormal = "green bold"
+    oldNormal = "red bold"
+    oldHighlight = "red bold 52"
+

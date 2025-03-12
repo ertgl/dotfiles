@@ -1,0 +1,13 @@
+[window]
+blur = false
+decorations = "None"
+decorations_theme_variant = "None"
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.99
+option_as_alt = "Both"
+title = "Terminal"
+
+[window.padding]
+x = 1
+y = 0

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>KeepAlive</key>
+		<true />
+		<key>Label</key>
+		<string>ke.bou.dark-mode-notify</string>
+		<key>LimitLoadToSessionType</key>
+		<array>
+			<string>Aqua</string>
+			<string>Background</string>
+			<string>LoginWindow</string>
+			<string>StandardIO</string>
+			<string>System</string>
+		</array>
+		<key>ProcessType</key>
+		<string>Interactive</string>
+		<key>RunAtLoad</key>
+		<true />
+		<key>StandardErrorPath</key>
+		<string>/usr/local/var/log/dark-mode-notify/dark-mode-notify.err.log</string>
+		<key>StandardOutPath</key>
+		<string>/usr/local/var/log/dark-mode-notify/dark-mode-notify.out.log</string>
+		<key>ProgramArguments</key>
+		<array>
+			<string>/usr/local/bin/dark-mode-notify</string>
+			<string>/usr/local/bin/fish</string>
+			<string>-l</string>
+			<string>-c</string>
+			<string>setenv_prefers_color_scheme</string>
+		</array>
+	</dict>
+</plist>

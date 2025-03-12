@@ -1,0 +1,6 @@
+[diff-so-fancy]
+    changeHunkIndicators = true
+    markEmptyLines = true
+    stripLeadingSymbols = false
+    useUnicodeRuler = true
+

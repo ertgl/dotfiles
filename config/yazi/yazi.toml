@@ -1,0 +1,52 @@
+[input]
+cursor_blink = false
+
+[mgr]
+linemode = "custom"
+mouse_events = ["click", "drag", "scroll"]
+ratio = [2, 5, 4]
+scrolloff = 5
+show_hidden = true
+show_symlink = true
+sort_by = "natural"
+sort_dir_first = true
+sort_sensitive = true
+sort_translit = false
+title_format = "{cwd}"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "mime"
+name = "local://*"
+run = "mime-ext.local"
+prio = "high"
+
+[[plugin.prepend_fetchers]]
+id = "mime"
+name = "remote://*"
+run = "mime-ext.remote"
+prio = "high"
+
+[preview]
+image_delay = 100
+image_filter = "catmull-rom"
+image_quality = 90
+sixel_fraction = 10
+tab_size = 4
+ueberzug_scale = 1.0
+wrap = "no"
+
+[which]
+sort_by = "none"
+sort_reverse = false
+sort_sensitive = true
+sort_translit = false
