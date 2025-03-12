@@ -1,0 +1,4 @@
+[terminal]
+[terminal.shell]
+program = "/usr/local/bin/fish"
+args = ["-i", "-l", "-c", "tmux_bind"]
