@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+
+PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
+THEMES_DIR="$HOME/.config/sketchybar/themes"
+
+if [ -z "$PREFERS_COLOR_SCHEME" ]; then
+  apple_interface_style_status="$(defaults read -g AppleInterfaceStyle 2>/dev/null 1>/dev/null && echo $?)"
+  if [ "$apple_interface_style_status" = "0" ];
+  then
+    PREFERS_COLOR_SCHEME="dark"
+  else
+    PREFERS_COLOR_SCHEME="light"
+  fi
+fi
+
+if [ "$PREFERS_COLOR_SCHEME" = "light" ]; then
+  # shellcheck source=config/sketchybar/themes/light.sh
+  source "$THEMES_DIR/light.sh"
+else
+  # shellcheck source=config/sketchybar/themes/dark.sh
+  source "$THEMES_DIR/dark.sh"
+fi
+
+sketchybar --add event window_changed
+
+default=(
+  padding_left=6
+  padding_right=6
+
+  icon.font="JetBrainsMono Nerd Font:Regular:16.0"
+  icon.color="$ICON_FG_COLOR"
+  icon.padding_left=4
+  icon.padding_right=4
+
+  label.font="JetBrains Mono:Regular:12.5"
+  label.color="$LABEL_FG_COLOR"
+  label.padding_left=2
+  label.padding_right=6
+
+  background.height=24
+  background.corner_radius=0
+)
+sketchybar --default "${default[@]}"
+
+sketchybar --bar \
+  position=top \
+  y_offset=0 \
+  height=36 \
+  margin=0 \
+  padding_left=6 \
+  padding_right=6 \
+  color=0x00000000 \
+  blur_radius=30
+
+finder_app_name="'Finder'"
+finder_app_id="app.$finder_app_name"
+sketchybar \
+  --add item "$finder_app_id" left \
+  --set "$finder_app_id" \
+    icon="󰀶" \
+    icon.padding_left=0 \
+    label="Files" \
+    background.height=32 \
+    background.corner_radius=4 \
+    click_script="APP_NAME=$finder_app_name $PLUGINS_DIR/open_app.sh"
+
+terminal_app_name="'Alacritty'"
+terminal_app_id="app.$terminal_app_name"
+sketchybar \
+  --add item "$terminal_app_id" left \
+  --set "$terminal_app_id" \
+    icon="󰆍" \
+    label="Console" \
+    background.height=28 \
+    background.corner_radius=4 \
+    click_script="APP_NAME=$terminal_app_name $PLUGINS_DIR/open_app.sh"
+
+code_editor_app_name="'Visual Studio Code'"
+code_editor_app_id="app.$code_editor_app_name"
+sketchybar \
+  --add item "$code_editor_app_id" left \
+  --set "$code_editor_app_id" \
+    icon="" \
+    label="Code" \
+    background.height=28 \
+    background.corner_radius=4 \
+    click_script="APP_NAME=$code_editor_app_name $PLUGINS_DIR/open_app.sh"
+
+web_browser_app_name="'Zen'"
+web_browser_app_id="app.$web_browser_app_name"
+sketchybar \
+  --add item "$web_browser_app_id" left \
+  --set "$web_browser_app_id" \
+    icon="" \
+    label="Web" \
+    background.height=28 \
+    background.corner_radius=4 \
+    click_script="APP_NAME=$web_browser_app_name $PLUGINS_DIR/open_app.sh"
+
+sketchybar \
+  --add bracket l_apps \
+    "$finder_app_id" \
+    "$terminal_app_id" \
+    "$code_editor_app_id" \
+    "$web_browser_app_id" \
+  --set l_apps \
+    background.color="$BRACKET_BG_COLOR"
+
+music_app_name="'Spotify'"
+music_app_id="app.$music_app_name"
+sketchybar \
+  --add item "$music_app_id" right \
+  --set "$music_app_id" \
+    icon="󰓇" \
+    label="Music" \
+    background.height=28 \
+    background.corner_radius=4 \
+    click_script="APP_NAME=$music_app_name $PLUGINS_DIR/open_app.sh"
+
+sketchybar \
+  --add bracket r_apps \
+    "$music_app_id" \
+  --set r_apps \
+    background.color="$BRACKET_BG_COLOR"
+
+front_app_switched_event_id="front_app_switched"
+front_app_switched_event_handler_id="handlers.$front_app_switched_event_id"
+sketchybar \
+  --add item "$front_app_switched_event_handler_id" left \
+  --set "$front_app_switched_event_handler_id" \
+    icon.drawing="off" \
+    script="$PLUGINS_DIR/handle_front_app_switch.sh"
+sketchybar \
+  --subscribe "$front_app_switched_event_handler_id" \
+    "$front_app_switched_event_id"
+
+mouse_entered_to_bar_event_id="mouse.entered.global"
+mouse_exited_from_bar_event_id="mouse.exited.global"
+bar_mouse_event_handler_id="handlers.bar_mouse_event"
+sketchybar \
+  --add item "$bar_mouse_event_handler_id" left \
+  --set "$bar_mouse_event_handler_id" \
+    icon.drawing="off" \
+    script="$PLUGINS_DIR/handle_bar_mouse_event.sh"
+sketchybar \
+  --subscribe "$bar_mouse_event_handler_id" \
+    "$mouse_entered_to_bar_event_id" \
+    "$mouse_exited_from_bar_event_id"
+
+sketchybar --update
