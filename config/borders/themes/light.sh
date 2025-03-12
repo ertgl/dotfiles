@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export ACTIVE_BORDER_COLOR=0xFFD2C5A1
+
+export INACTIVE_BORDER_COLOR=0xe0918174
