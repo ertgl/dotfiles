@@ -1,0 +1,24 @@
+elixir https://github.com/asdf-vm/asdf-elixir.git
+erlang https://github.com/asdf-vm/asdf-erlang.git
+
+golang https://github.com/asdf-community/asdf-golang.git
+
+java https://github.com/halcyon/asdf-java.git
+gradle https://github.com/rfrancis/asdf-gradle.git
+maven https://github.com/halcyon/asdf-maven.git
+
+lua https://github.com/Stratus3D/asdf-lua.git
+
+nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+php https://github.com/asdf-community/asdf-php.git
+
+protoc https://github.com/paxosglobal/asdf-protoc.git
+
+python https://github.com/asdf-community/asdf-python.git
+
+ruby https://github.com/asdf-vm/asdf-ruby.git
+
+rust https://github.com/code-lever/asdf-rust.git
+
+zig https://github.com/cheetah/asdf-zig.git

@@ -1,0 +1,34 @@
+[advice]
+    skippedCherryPicks = false
+
+[commit]
+    gpgsign = true
+
+[core]
+    ; pager = diff-so-fancy | less --tabs=4 -RF
+    pager = delta
+
+[diff]
+    colorMoved = default
+
+[init]
+    defaultBranch = main
+
+[interactive]
+    ; diffFilter = diff-so-fancy --patch
+    diffFilter = delta --color-only
+
+[merge]
+    conflictStyle = zdiff3
+
+[push]
+    autoSetupRemote = true
+
+[include]
+    path = ~/.config/git/color.gitconfig
+    path = ~/.config/git/diff-so-fancy.gitconfig
+    path = ~/.config/git/delta.gitconfig
+    path = ~/.config/git/github.gitconfig
+    path = ~/.config/git/gpg.gitconfig
+    path = ~/.config/git/lfs.gitconfig
+    path = ~/.config/git/user.gitconfig
