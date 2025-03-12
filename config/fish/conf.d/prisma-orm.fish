@@ -1,0 +1,3 @@
+if test -z "$CHECKPOINT_DISABLE"
+    set -Ux CHECKPOINT_DISABLE 1
+end
