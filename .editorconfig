@@ -1,0 +1,90 @@
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+root = true
+tab_width = 4
+trim_trailing_whitespace = true
+
+[*.conf]
+indent_size = 4
+indent_style = space
+
+[*.el]
+indent_size = 2
+indent_style = space
+
+[*.fish]
+indent_size = 4
+indent_style = space
+
+[*.gitconfig]
+indent_size = 4
+indent_style = space
+
+[*.json]
+indent_size = 2
+indent_style = space
+
+[*.lua]
+indent_size = 2
+indent_style = space
+
+[*.md]
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = false
+
+[*.py]
+indent_size = 4
+indent_style = space
+
+[*.sh]
+indent_size = 2
+indent_style = space
+
+[*.tmux]
+indent_size = 4
+indent_style = space
+
+[*.toml]
+indent_size = 2
+indent_style = space
+
+[*.xml]
+indent_size = 2
+indent_style = space
+
+[*.{yaml,yml}]
+indent_size = 2
+indent_style = space
+
+[.vimrc]
+indent_size = 2
+indent_style = space
+
+[bordersrc]
+indent_size = 2
+indent_style = space
+
+[Brewfile]
+indent_size = 2
+indent_style = space
+
+[fish_variables]
+indent_size = 4
+indent_style = space
+
+[sketchybarrc]
+indent_size = 2
+indent_style = space
+
+[skhdrc]
+indent_size = 2
+indent_style = space
+
+[yabairc]
+indent_size = 2
+indent_style = space

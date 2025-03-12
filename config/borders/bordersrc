@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+THEMES_DIR="$HOME/.config/borders/themes"
+
+if [ -z "$PREFERS_COLOR_SCHEME" ]; then
+  apple_interface_style_status="$(defaults read -g AppleInterfaceStyle 2>/dev/null 1>/dev/null && echo $?)"
+  if [ "$apple_interface_style_status" = "0" ];
+  then
+    PREFERS_COLOR_SCHEME="dark"
+  else
+    PREFERS_COLOR_SCHEME="light"
+  fi
+fi
+
+if [ "$PREFERS_COLOR_SCHEME" = "light" ]; then
+  # shellcheck source=config/borders/themes/light.sh
+  source "$THEMES_DIR/light.sh"
+else
+  # shellcheck source=config/borders/themes/dark.sh
+  source "$THEMES_DIR/dark.sh"
+fi
+
+options=(
+  active_color="$ACTIVE_BORDER_COLOR"
+  ax_focus=off
+  hidpi=on
+  inactive_color="$INACTIVE_BORDER_COLOR"
+  style=square
+  width=5.0
+)
+
+borders "${options[@]}"
