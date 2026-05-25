@@ -1,0 +1,39 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.4",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x1031",
+          "productName" : "2.4G Wireless Mouse",
+          "vendorID" : "0x3938"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x3020",
+          "productName" : "Philips USB Receiver",
+          "serialNumber" : "b120300001",
+          "vendorID" : "0x3151"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : false
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    }
+  ]
+}

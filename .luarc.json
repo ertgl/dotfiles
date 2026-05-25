@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "codeLens": {
+    "enable": false
+  },
+  "diagnostics": {
+    "globals": [
+      "rt",
+      "vim"
+    ]
+  },
+  "hint": {
+    "enable": false
+  },
+  "runtime": {
+    "version": "Lua 5.5"
+  },
+  "signatureHelp": {
+    "enable": false
+  }
+}
