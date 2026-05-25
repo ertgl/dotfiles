@@ -1,0 +1,12 @@
+{
+  "license:mit": {
+    "prefix": "## License",
+    "body": [
+      "## License",
+      "",
+      "This project is licensed under the",
+      "[MIT License](https://opensource.org/license/mit).",
+      "See the [LICENSE](LICENSE) file for more information."
+    ]
+  }
+}

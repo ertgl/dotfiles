@@ -1,0 +1,20 @@
+[delta]
+    config = ~/.config/git/delta.gitconfig
+    detect-dark-light = auto
+    diff-so-fancy = true
+    features = decorations
+    hyperlinks = true
+    hyperlinks-file-link-format = "{path}:{line}"
+    line-numbers = true
+    navigate = true
+    side-by-side = false
+    tabs = 4
+    true-color = always
+    zero-style = dim syntax
+
+[delta "decorations"]
+    commit-decoration-style = none
+    commit-style = bold yellow ul
+    file-decoration-style = none
+    file-style = bold yellow ul
+    hunk-header-decoration-style = yellow box

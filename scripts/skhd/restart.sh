@@ -1,0 +1,1 @@
+skhd --restart-service

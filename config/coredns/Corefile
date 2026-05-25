@@ -1,0 +1,34 @@
+.:36737 {
+  any
+  cache {
+    success 600
+    denial 600
+  }
+  cancel
+  etcd {
+    endpoint http://localhost:2379
+    fallthrough
+    min-lease-ttl 60
+    max-lease-ttl 1h
+    path /skydns
+  }
+  health :36734 {
+    lameduck 1s
+  }
+  hosts {
+    fallthrough
+  }
+  import zones/*.conf
+  loadbalance round_robin
+  local
+  loop
+  nsid
+  ready :36737
+  reload 30s 15s
+  timeouts {
+    idle 10s
+    read 10s
+    write 10s
+  }
+  whoami
+}
