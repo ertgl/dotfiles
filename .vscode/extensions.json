@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "bmalehorn.vscode-fish",
+    "codezombiech.gitignore",
+    "editorconfig.editorconfig",
+    "johnnymorganz.stylua",
+    "mads-hartmann.bash-ide-vscode",
+    "malmaud.tmux",
+    "mattn.lisp",
+    "ms-python.python",
+    "ms-vscode.makefile-tools",
+    "redhat.vscode-xml",
+    "sammcleod.ghostty-config-syntax",
+    "sumneko.lua",
+    "xadillax.viml",
+    "tamasfe.even-better-toml",
+    "tangzx.emmylua",
+    "timonwong.shellcheck"
+  ]
+}
