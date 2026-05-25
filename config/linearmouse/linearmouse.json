@@ -1,0 +1,59 @@
+{
+  "$schema": "https:\/\/schema.linearmouse.app\/0.11.4",
+  "schemes": [
+    {
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x3020",
+          "productName": "Philips USB Receiver",
+          "serialNumber": "b120300001",
+          "vendorID": "0x3151"
+        }
+      },
+      "pointer": {
+        "disableAcceleration": false
+      },
+      "scrolling": {
+        "reverse": {
+          "vertical": true
+        }
+      }
+    },
+    {
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x503a",
+          "productName": "Xiaomi Wireless Mouse Lite 2",
+          "vendorID": "0x2717"
+        }
+      },
+      "pointer": {
+        "acceleration": 1.5,
+        "disableAcceleration": false
+      },
+      "scrolling": {
+        "reverse": {
+          "vertical": true
+        }
+      }
+    },
+    {
+      "if": {
+        "device": {
+          "category": "trackpad",
+          "productID": "0x0",
+          "productName": "Apple Internal Keyboard \/ Trackpad",
+          "serialNumber": "HXMHNF00AYT0000YCJ+ANLM",
+          "vendorID": "0x0"
+        }
+      },
+      "scrolling": {
+        "speed": {
+          "vertical": 0
+        }
+      }
+    }
+  ]
+}
