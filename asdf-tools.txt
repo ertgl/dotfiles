@@ -1,0 +1,35 @@
+# dependants:
+# - erlang
+java openjdk-26.0.1
+gradle 9.6.1
+maven 3.9.16
+
+# dependants:
+# - elixir
+# dependencies:
+# - java
+erlang 29.0.3
+
+# dependencies:
+# - erlang
+elixir ref:v1.20.2
+
+golang 1.26.5
+
+lua 5.5.0
+
+nodejs 24.18.0
+nodejs 26.5.0
+
+php 8.5.8
+
+protoc 35.1
+
+python 3.14.6t
+python 3.14.6
+
+ruby 4.0.5
+
+rust 1.97.0
+
+zig 0.16.0

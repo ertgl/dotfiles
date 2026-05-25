@@ -1,0 +1,62 @@
+local M = {}
+
+function M.get_treesitter_parser_names()
+  return {
+    "astro",
+    "bash",
+    "c",
+    "cpp",
+    "css",
+    "csv",
+    "dockerfile",
+    "editorconfig",
+    "elixir",
+    "erlang",
+    "fish",
+    "git_config",
+    "git_rebase",
+    "gitattributes",
+    "gitcommit",
+    "gitignore",
+    "gomod",
+    "gosum",
+    "graphql",
+    "hcl",
+    "heex",
+    "html",
+    "htmldjango",
+    "ini",
+    "javascript",
+    "jq",
+    "jsdoc",
+    "json",
+    "json5",
+    "jsonc",
+    "lua",
+    "luap",
+    "make",
+    "markdown",
+    "markdown_inline",
+    "nginx",
+    "po",
+    "properties",
+    "proto",
+    "python",
+    "regex",
+    "requirements",
+    "robots",
+    "rust",
+    "sql",
+    "tmux",
+    "toml",
+    "typescript",
+    "xml",
+    "yaml",
+    "zig",
+  }
+end
+
+function M.setup()
+end
+
+return M
