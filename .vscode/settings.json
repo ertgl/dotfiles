@@ -1,0 +1,18 @@
+{
+  "[lua]": {
+    // "editor.defaultFormatter": "tangzx.emmylua"
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "[shellscript]": {
+    "editor.defaultColorDecorators": "never",
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode",
+    "files.eol": "\n"
+  },
+  "files.associations": {
+    ".vscode/*.json": "jsonc",
+    "config/borders/bordersrc": "shellscript",
+    "config/ghostty/config": "ghostty-config-syntax",
+    "config/skhd/skhdrc": "fish"
+  },
+  "stylua.targetReleaseVersion": "latest"
+}

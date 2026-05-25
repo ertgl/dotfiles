@@ -1,0 +1,50 @@
+auto-update = off
+
+background-opacity = 0.98
+
+env = COLORTERM=truecolor
+
+font-family = JetBrainsMonoNL Nerd Font Mono
+font-family-bold = JetBrainsMonoNL NFM Bold
+font-family-italic = JetBrainsMonoNL NFM Italic
+font-family-bold-italic = JetBrainsMonoNL NFM Bold Italic
+font-size = 12
+
+command = /opt/homebrew/bin/tmux new -A
+
+keybind = global:ctrl+alt+cmd+t=toggle_quick_terminal
+
+keybind = shift+cmd+w=close_surface
+
+# hex(ord("\\"))
+keybind = cmd+d=text:\x01\x5c
+
+# hex(ord("-"))
+keybind = shift+cmd+d=text:\x01\x2d
+
+# hex(ord("c"))
+keybind = cmd+t=text:\x01\x63
+
+# hex(ord("x") & 0x1F)
+keybind = cmd+w=text:\x01\x18
+
+macos-custom-icon = /System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.icns
+macos-icon = custom
+
+macos-option-as-alt = true
+
+shell-integration = fish
+
+theme = dark:Gruvbox Dark Hard,light:Gruvbox Light Hard
+
+window-colorspace = display-p3
+
+window-decoration = none
+
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+
+window-save-state = always
+
+window-theme = system

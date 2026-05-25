@@ -1,0 +1,18 @@
+{
+  "__all__:inline": {
+    "prefix": "__all__",
+    "priority": 100,
+    "body": [
+      "__all__ = [\"${1}\"]"
+    ]
+  },
+  "__all__:multiline": {
+    "prefix": "__all__",
+    "priority": 200,
+    "body": [
+      "__all__ = [",
+      "    \"${1}\",",
+      "]"
+    ]
+  }
+}
